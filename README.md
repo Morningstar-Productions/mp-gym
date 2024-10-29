@@ -19,8 +19,8 @@ Gym Resource for Pump &amp; Run Gymnasium (Rewritten from Dynyx-Gym - Credit to 
 
 
 ## Dependencies
-[mz-skills](https://github.com/GreenSlayer/mz-skills)
-[Gym MLO](https://www.gta5-mods.com/maps/mlo-pump-run-gym-add-on-sp-fivem-ragemp)
-[qbx_core](https://github.com/Qbox-Project/qbx_core)
-[ox_lib](https://github.com/overextended/ox_lib)
-[Renewed-Lib](https://github.com/Renewed-Scripts/Renewed-Lib)
+- [mz-skills](https://github.com/GreenSlayer/mz-skills)
+- [Gym MLO](https://www.gta5-mods.com/maps/mlo-pump-run-gym-add-on-sp-fivem-ragemp)
+- [qbx_core](https://github.com/Qbox-Project/qbx_core)
+- [ox_lib](https://github.com/overextended/ox_lib)
+- [Renewed-Lib](https://github.com/Renewed-Scripts/Renewed-Lib)
