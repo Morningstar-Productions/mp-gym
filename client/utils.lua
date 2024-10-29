@@ -21,7 +21,6 @@ local function lockpickGame(circles, time)
 
     return lib.skillCheck(game, {'1', '2', '3', '4'})
 end
-exports('lockpickGame', lockpickGame)
 
 return {
     createBlips = createBlips,
