@@ -15,7 +15,7 @@ Gym Resource for Pump &amp; Run Gymnasium (Rewritten from Dynyx-Gym - Credit to 
     description = 'Lifetime Gym Membership',
 }
 ```
-3. Make sure to intall all the Dependencies.
+3. Make sure to install all the Dependencies.
 
 
 ## Dependencies
