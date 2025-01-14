@@ -239,17 +239,7 @@ end
 
 local function checkPass()
     local hasPass = exports.ox_inventory:Search('count', config.gymPass.item)
-
-    if not hasPass > 1 then
-        return lib.notify({
-            title = 'Pump & Run Gymnasium',
-            description = 'You don\'t have a membership pass.',
-            type = 'error',
-            icon = 'fas fa-dumbbell',
-            style = { color = '000' },
-            duration = 7500,
-        })
-    end
+    return hasPass >= 1 and true or false
 end
 
 local function loadZones()
@@ -265,7 +255,17 @@ local function loadZones()
                     name = 'treadmill_'..k,
                     icon = 'fas fa-person-running',
                     onSelect = function()
-                        checkPass()
+                        if not checkPass() then
+                            return lib.notify({
+                                title = 'Pump & Run Gymnasium',
+                                description = 'You don\'t have a membership pass.',
+                                type = 'error',
+                                icon = 'fas fa-dumbbell',
+                                style = { color = '000' },
+                                duration = 7500,
+                            })
+                        end
+
                         useTreadmill()
                     end,
                     canInteract = function(_, distance)
@@ -287,7 +287,17 @@ local function loadZones()
                 name = 'chinups',
                 icon = 'fas fa-arrow-up',
                 onSelect = function()
-                    checkPass()
+                    if not checkPass() then
+                        return lib.notify({
+                            title = 'Pump & Run Gymnasium',
+                            description = 'You don\'t have a membership pass.',
+                            type = 'error',
+                            icon = 'fas fa-dumbbell',
+                            style = { color = '000' },
+                            duration = 7500,
+                        })
+                    end
+
                     doChinups()
                 end,
                 canInteract = function(_, distance)
@@ -308,7 +318,17 @@ local function loadZones()
                 name = 'chinups',
                 icon = 'fas fa-arrow-up',
                 onSelect = function()
-                    checkPass()
+                    if not checkPass() then
+                        return lib.notify({
+                            title = 'Pump & Run Gymnasium',
+                            description = 'You don\'t have a membership pass.',
+                            type = 'error',
+                            icon = 'fas fa-dumbbell',
+                            style = { color = '000' },
+                            duration = 7500,
+                        })
+                    end
+
                     doChinups2()
                 end,
                 canInteract = function(_, distance)
@@ -329,7 +349,17 @@ local function loadZones()
                 name = 'liftweights',
                 icon = 'fas fa-dumbbell',
                 onSelect = function()
-                    checkPass()
+                    if not checkPass() then
+                        return lib.notify({
+                            title = 'Pump & Run Gymnasium',
+                            description = 'You don\'t have a membership pass.',
+                            type = 'error',
+                            icon = 'fas fa-dumbbell',
+                            style = { color = '000' },
+                            duration = 7500,
+                        })
+                    end
+
                     liftWeights()
                 end,
                 canInteract = function(_, distance)
@@ -350,7 +380,17 @@ local function loadZones()
                 name = 'liftweights2',
                 icon = 'fas fa-dumbbell',
                 onSelect = function()
-                    checkPass()
+                    if not checkPass() then
+                        return lib.notify({
+                            title = 'Pump & Run Gymnasium',
+                            description = 'You don\'t have a membership pass.',
+                            type = 'error',
+                            icon = 'fas fa-dumbbell',
+                            style = { color = '000' },
+                            duration = 7500,
+                        })
+                    end
+
                     liftWeights()
                 end,
                 canInteract = function(_, distance)
@@ -371,7 +411,17 @@ local function loadZones()
                 name = 'yoga',
                 icon = 'fas fa-face-smile',
                 onSelect = function()
-                    checkPass()
+                    if not checkPass() then
+                        return lib.notify({
+                            title = 'Pump & Run Gymnasium',
+                            description = 'You don\'t have a membership pass.',
+                            type = 'error',
+                            icon = 'fas fa-dumbbell',
+                            style = { color = '000' },
+                            duration = 7500,
+                        })
+                    end
+
                     doYoga()
                 end,
                 canInteract = function(_, distance)
