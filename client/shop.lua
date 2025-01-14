@@ -76,16 +76,16 @@ CreateThread(function()
                                     }) then
                                         local gotPass = lib.callback.await('mp-gym:server:givePass', false)
 
-                                        if not gotPass then return end
-
-                                        return lib.notify({
-                                            title = 'Pump & Run Gymnasium',
-                                            description = 'You don\'t have enough money!',
-                                            type = 'error',
-                                            icon = 'fas fa-dumbbell',
-                                            style = { color = '000' },
-                                            duration = 7500
-                                        })
+                                        if gotPass then
+                                            return lib.notify({
+                                                title = 'Pump & Run Gymnasium',
+                                                description = 'Enjoy the gym! Don\'t break the equipment!',
+                                                type = 'success',
+                                                icon = 'fas fa-dumbbell',
+                                                style = { color = '000' },
+                                                duration = 7500
+                                            })
+                                        end
                                     end
                                 end,
                                 icon = 'fas fa-dumbbell'

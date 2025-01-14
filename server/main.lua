@@ -14,9 +14,9 @@ end)
 lib.callback.register('mp-gym:server:hasMoney', function(source)
     local playerMoney = Renewed.getMoney(source, 'cash')
 
-    if playerMoney ~= config.gymPass.price then
-        return false
+    if playerMoney >= config.gymPass.price then
+        return true
     end
 
-    return true
+    return false
 end)
