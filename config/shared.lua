@@ -7,7 +7,8 @@ return {
 
     gymPass = {
         price = 1250, -- Price for the Gym Membership
-        item = "gym_pass" -- The Item Name for the Gym Membership
+        item = "gym_pass", -- The Item Name for the Gym Membership
+        moneyType = 'cash'
     },
 
     skills = {

@@ -1,10 +1,8 @@
 local config = require 'config.shared'
 
 lib.callback.register('mp-gym:server:givePass', function(source)
-    local src = source
-
-    if Renewed.removeMoney(src, 'cash', config.gymPass.price) then
-        exports.ox_inventory:AddItem(src, config.gymPass.item, 1)
+    if Renewed.removeMoney(source, config.gymPass.price, config.gymPass.moneyType) then
+        exports.ox_inventory:AddItem(source, config.gymPass.item, 1)
         return true
     end
 
@@ -12,7 +10,7 @@ lib.callback.register('mp-gym:server:givePass', function(source)
 end)
 
 lib.callback.register('mp-gym:server:hasMoney', function(source)
-    local playerMoney = Renewed.getMoney(source, 'cash')
+    local playerMoney = Renewed.getMoney(source, config.gymPass.moneyType)
 
     if playerMoney >= config.gymPass.price then
         return true
