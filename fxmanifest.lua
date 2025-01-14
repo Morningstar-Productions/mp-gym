@@ -2,8 +2,8 @@ fx_version 'cerulean'
 game 'gta5'
 
 name "mp-gym"
-description "Gym Workout Script rewritten from dynyx-gym to account for ox_lib and Qbox"
-author "Green & xViperAG"
+description "Gym Workout Script rewritten from dynyx-gym to account for ox_lib and Multi-Framework"
+author "xViperAG"
 version "1.0.0"
 
 lua54 'yes'
